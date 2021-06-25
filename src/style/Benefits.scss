@@ -1,0 +1,44 @@
+@import '../styles';
+
+.benefits {
+    padding: 4rem 0 10rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    .benefit {
+        text-align: center;
+        padding: 2rem;
+
+        img {
+            max-width: 100px;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            padding: .5rem;
+        }
+        p {
+            padding: .5rem;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+        transition: 80ms ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    .benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .benefit {
+            img {
+                max-width: 120px;
+            }
+        }
+    }
+}

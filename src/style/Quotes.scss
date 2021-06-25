@@ -1,0 +1,68 @@
+@import '../styles';
+
+.quotes {
+    padding: 8rem 1.5rem 20rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &-pic {
+        position: absolute;
+        padding: 0 1.6rem;
+        img {
+            max-height: 2rem;
+        }
+    }
+
+    .quote {
+        margin: 2rem .8rem;
+        background-color: $dark-blue4;
+        padding: 1.5rem 1.6rem;
+        border-radius: .5rem;
+        
+        > p {
+            line-height: 2em;
+            font-size: .85em;
+        }
+
+        &-person {
+            display: flex;
+            padding: 2rem 0 0 0;
+            &-pic {
+                img {
+                    max-width: 2.5rem;
+                    border-radius: 100%;
+                }
+            }
+            &-info {
+                margin-left: 1rem;
+                p, h3 {
+                    font-family: $raleway;
+                    line-height: 1.5em;
+                    letter-spacing: .05em;
+                }
+                h3 {
+                    font-size: 1em;
+                }
+                p {
+                    font-size: .8em;
+                }
+            }
+        }
+        transition: 80ms ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+@media only screen and (min-width: 926px) {
+    .quotes {
+        flex-direction: row;
+
+        .quote {
+            margin: 1rem 1rem;
+            font-size: 1.2em;
+        }
+    }
+}

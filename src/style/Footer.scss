@@ -1,0 +1,92 @@
+@import '../styles';
+
+.footer {
+    padding: 0 2.5rem;
+
+    img {
+        margin-top:0;
+        margin-bottom: 1.5rem;
+    }
+
+    &-sections {
+        display: flex;
+        flex-direction: column;
+
+        &-section1,
+        &-section2 {
+            .footer-item {
+                margin: 1.5rem 0;
+                display: flex;
+                >p {
+                    font-size: 1.1em;
+                    font-weight: 300;
+                    :nth-child(1) {
+                        font-size: 1.2rem;
+                        margin-right: 1.6rem;
+                    }
+                }
+            }
+        }
+        &-section3,
+        &-section4 {
+            padding: 1.6rem 0;
+            ul {
+                list-style: none;
+                li {
+                    padding: .6rem 0;
+                    a {
+                        transition: 80ms ease;
+                    }
+                }
+            }
+        }
+        &-section5 {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            a {
+                font-size: 1.2em;
+                border: 1px $white solid;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                margin: 0 10px;
+                transition: 80ms ease;
+            }
+        }
+    }
+    
+    a:hover {
+        cursor: pointer;
+        color: $cyan;
+        border-color: $cyan;
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .footer {
+        img {
+            margin-top:0;
+            margin-bottom: 1.5rem;
+        }
+        &-sections {
+            flex-direction: row;
+            &-section1,
+            &-section2 {
+                flex: 3;
+                padding: 0 2rem;
+            }
+            &-section3,
+            &-section4 {
+                flex: 1;
+                padding: 1rem;
+            }
+            &-section5 {
+                flex: 1;
+            }
+        }
+    }
+}
