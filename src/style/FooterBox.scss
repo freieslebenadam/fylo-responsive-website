@@ -39,13 +39,20 @@
                 outline: none;
             }
         }
-
         .button {
             >a,
             >button {
                 padding: 1rem 0;
                 width: 100%;
             }
+        }
+        label {
+            position: absolute;
+            text-align: left;
+            top: -20px;
+            font-size: 0.85em;
+            left: 0;
+            color: rgb(255, 144, 144);
         }
     }
 }
@@ -77,6 +84,15 @@
             }
             .button {
                 flex: 2;
+            }
+            label {
+                position: absolute;
+                text-align: left;
+                top: auto;
+                bottom: -10px;
+                font-size: 1em;
+                left: 20px;
+                color: rgb(255, 144, 144);
             }
         }
     }
